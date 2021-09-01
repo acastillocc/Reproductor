@@ -22,44 +22,116 @@
   width: 350px;
   height: 650px;
 }
-#pagina #header {
+
+#header {
   display: flex;
   padding-top: 10px;
   margin: 20px;
   height: 320px;
   justify-content: space-between;
 }
-#pagina #header img {
+#header img {
   cursor: pointer;
 }
-#pagina #controllers {
+
+#controllers {
   display: flow;
-  color: white;
   padding: 60px;
   text-align: center;
+  color: white;
   height: 30vh;
   align-items: center;
 }
-#pagina #controllers h5 {
+#controllers .controles ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+#controllers .controles ul li {
+  cursor: pointer;
+}
+#controllers .controles ul #play,
+#controllers .controles ul #pause {
+  width: 50px;
+  height: 50px;
+  border-radius: 45%;
+}
+#controllers .controles ul #play:hover,
+#controllers .controles ul #pause:hover {
+  transition: all 0.3s ease;
+}
+#controllers .controles ul .play {
+  background: url(/images/play.png) red;
+  background-size: cover;
+}
+#controllers .controles ul .play:hover {
+  background-image: url(/images/play.png);
+  background-color: #ec9b9b;
+}
+#controllers .controles ul .pause {
+  background: url(/images/pausa.png) red no-repeat;
+  background-size: 50%;
+  background-position: center;
+}
+#controllers .controles ul .pause:hover {
+  background-image: url(/images/pausa.png) no-repeat;
+  background-color: #ec9b9b;
+}
+#controllers .controles ul .hide {
+  display: none;
+}
+#controllers h5 {
   color: gray;
   font-weight: 400;
 }
-#pagina #controllers img {
-  cursor: pointer;
-  justify-content: center;
-}
-#pagina #footer {
+
+#footer {
   display: flex;
-  position: fixed;
-  bottom: 0;
-  padding-top: 0px;
-  margin: 20px;
+  width: 100%;
+  padding: 0px 20px;
+  align-items: flex-end;
   justify-content: space-between;
-  width: 27vw;
-  height: 75px;
 }
-#pagina #footer img {
+#footer img {
   cursor: pointer;
+}
+
+#cancion {
+  display: none;
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  #pagina {
+    display: flex-start;
+    background: #000;
+    margin: 0;
+    padding: 0;
+  }
+  #pagina #header {
+    display: flex-start;
+  }
+  #pagina .contenedor {
+    display: flex-start;
+    width: 100%;
+    height: 812px;
+  }
+  #pagina #controllers {
+    display: flex-end;
+    height: 45vh;
+    padding: 150px 20px;
+    list-style: none;
+    align-items: end;
+    justify-content: center;
+    color: white;
+  }
+
+  #footer {
+    display: flex;
+    bottom: 0;
+    padding: 20px;
+    height: 7vh;
+    justify-content: space-between;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

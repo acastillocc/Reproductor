@@ -1,80 +1,156 @@
+$mobile-bar-height: 45px;
+$mobile-content-height: 90vh;
+
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;  
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #pagina {
-    display: flex;
-    background: #e95858;
-    padding: 30px 60px; 
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  background: #e95858;
+  padding: 30px 60px;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 
   .contenedor {
     background: #000;
-    background-image:url(/images/albumCover.jpg);
+    background-image: url(/images/albumCover.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     width: 350px;
     height: 650px;
-    // align-items: center;  
   }
-
-  #header{
-    display: flex;
-    padding-top: 10px;
-    margin: 20px;
-    height: 320px;
-    justify-content: space-between;
-
-    img{
-        cursor: pointer;
-    }
- }
-
- #controllers {
-     display: flow;
-     color: white;
-     padding: 60px;
-     text-align: center;
-     height: 30vh;
-     align-items: center;
-
-     h5{
-         color: gray;
-         font-weight: 400;
-     }
-
-     img{
-        
-        cursor: pointer;
-        justify-content: center;
-     }
-
-
- }
-
- #footer{
-    display: flex;
-    position: fixed;
-    bottom: 0; 
-    padding-top: 0px;
-    margin: 20px;
-    justify-content: space-between;
-    width: 27vw;
-    height: 75px;
-    
-    img {
-        cursor: pointer;
-    }
- }
-
-
-  
 }
 
+#header {
+  display: flex;
+  padding-top: 10px;
+  margin: 20px;
+  height: 320px;
+  justify-content: space-between;
 
+  img {
+    cursor: pointer;
+  }
+}
+
+#controllers {
+  display: flow;
+  padding: 60px;
+  text-align: center;
+  color: white;
+  height: 30vh;
+  align-items: center;
+
+  .controles {
+    ul {
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+
+      li {
+        cursor: pointer;
+      }
+      #play,
+      #pause {
+        width: 50px;
+        height: 50px;
+        border-radius: 45%;
+        
+        &:hover{
+          transition: all 0.3s ease;
+        }
+
+      }
+      .play {
+        background: url(/images/play.png) red;
+        background-size: cover;
+
+        &:hover {
+          background-image: url(/images/play.png);
+          background-color: #ec9b9b;
+
+          
+        }
+      }
+
+      .pause {
+        background: url(/images/pausa.png) red no-repeat;
+        background-size: 50%;
+        background-position: center;
+
+        &:hover {
+          background-image: url(/images/pausa.png) no-repeat;
+          background-color: #ec9b9b;
+
+          
+        }
+      }
+      .hide {
+        display: none;
+      }
+
+    }
+  }
+  
+  h5 {
+    color: gray;
+    font-weight: 400;
+  }
+}
+
+#footer {
+  display: flex;
+  width: 100%;
+  padding: 0px 20px;
+  align-items: flex-end;
+  justify-content: space-between;
+  
+  img {
+    cursor: pointer;
+  }
+}
+#cancion{
+  display: none;
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  #pagina {
+    display: flex-start;
+    background: #000;
+    margin: 0;
+    padding: 0;
+
+    #header {
+      display: flex-start;
+    }
+    .contenedor {
+      display: flex-start;
+      width: 100%;
+      height: 812px;
+    }
+
+    #controllers {
+      display: flex-end;
+      height: 45vh;
+      padding: 150px 20px;
+      list-style: none;
+      align-items: end;
+      justify-content: center;
+      color: white;
+    }
+  }
+
+  #footer {
+    display: flex;
+    bottom: 0;
+    padding: 20px;
+    height: 7vh;
+    justify-content: space-between;
+  }
+}
