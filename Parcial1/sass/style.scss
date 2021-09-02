@@ -29,7 +29,7 @@ $mobile-content-height: 90vh;
 
 #header {
   display: flex;
-  padding-top: 10px;
+  padding: 10px 10px;
   margin: 20px;
   height: 320px;
   justify-content: space-between;
@@ -61,11 +61,10 @@ $mobile-content-height: 90vh;
         width: 50px;
         height: 50px;
         border-radius: 45%;
-        
-        &:hover{
+
+        &:hover {
           transition: all 0.3s ease;
         }
-
       }
       .play {
         background: url(/images/play.png) red;
@@ -74,8 +73,6 @@ $mobile-content-height: 90vh;
         &:hover {
           background-image: url(/images/play.png);
           background-color: #ec9b9b;
-
-          
         }
       }
 
@@ -87,17 +84,14 @@ $mobile-content-height: 90vh;
         &:hover {
           background-image: url(/images/pausa.png) no-repeat;
           background-color: #ec9b9b;
-
-          
         }
       }
       .hide {
         display: none;
       }
-
     }
   }
-  
+
   h5 {
     color: gray;
     font-weight: 400;
@@ -107,15 +101,16 @@ $mobile-content-height: 90vh;
 #footer {
   display: flex;
   width: 100%;
-  padding: 0px 20px;
+  height: 5vh;
+  padding: 0px 25px;
   align-items: flex-end;
   justify-content: space-between;
-  
+
   img {
     cursor: pointer;
   }
 }
-#cancion{
+#cancion {
   display: none;
 }
 
@@ -149,7 +144,7 @@ $mobile-content-height: 90vh;
   #footer {
     display: flex;
     bottom: 0;
-    padding: 20px;
+    padding-top: 15px;
     height: 7vh;
     justify-content: space-between;
   }

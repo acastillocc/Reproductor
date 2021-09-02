@@ -25,7 +25,7 @@
 
 #header {
   display: flex;
-  padding-top: 10px;
+  padding: 10px 10px;
   margin: 20px;
   height: 320px;
   justify-content: space-between;
@@ -88,7 +88,8 @@
 #footer {
   display: flex;
   width: 100%;
-  padding: 0px 20px;
+  height: 5vh;
+  padding: 0px 25px;
   align-items: flex-end;
   justify-content: space-between;
 }
@@ -128,7 +129,7 @@
   #footer {
     display: flex;
     bottom: 0;
-    padding: 20px;
+    padding-top: 15px;
     height: 7vh;
     justify-content: space-between;
   }
